@@ -17,7 +17,5 @@ useEffect(() => {
 localStorage.setItem('items', JSON.stringify(items));
 }, [items]);
 ```
-
-
-### The project is in progress...
+When retrieving data, since it was stored as a JSON string, you need to parse it back into a JavaScript object using `JSON.parse()`
 
