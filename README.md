@@ -19,3 +19,5 @@ localStorage.setItem('items', JSON.stringify(items));
 ```
 When retrieving data, since it was stored as a JSON string, you need to parse it back into a JavaScript object using `JSON.parse()`
 
+
+## Custom Hook for LocalStorage
