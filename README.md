@@ -48,3 +48,5 @@ console.log(error);
 return [storedValue, setValue];
 }
 ```
+
+This custom hook `useLocalStorage` takes a key and an initialValue and manages the LocalStorage for that key. It provides a storedValue that reflects the current state of the `LocalStorage` and a setValue function to update it.
