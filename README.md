@@ -21,3 +21,5 @@ When retrieving data, since it was stored as a JSON string, you need to parse it
 
 
 ## Custom Hook for LocalStorage
+
+For a more reusable solution, you can create a custom hook that abstracts the `LocalStorage` logic. This custom hook can then be used across multiple components. Here's a basic structure of a custom hook for `LocalStorage` :
