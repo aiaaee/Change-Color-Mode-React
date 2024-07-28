@@ -1,23 +1,27 @@
-import React from 'react'
+import React , {useState} from 'react'
 import './style.css'
 import photo1 from './image/1.jpg'
 import photo2 from './image/2.jpg'
 import photo3 from './image/3.jpg'
 
 function App(){
+    const [mode , setMode] = useState(false)
+
+    console.log(mode)
+
     return(
         <>
-            <div className=''>
+            <div className={`${mode ? 'bg-black' : ""}`}>
                 
-                <header className='border border-1'>
+                <header className={`border border-1 ${mode ? "bg-lightgray" : ""}`}>
                      <div className='Main_header container p-3'>
                         <ul className='d-flex '>
                             <li className='fs-4 p-2'>Home</li>
                             <li className='fs-4 p-2 ps-4'>Contact Us</li>
-                            <li className='fs-4 p-2 ps-4 text-danger'>Mode</li>
+                            <li className={`fs-4 p-2 ps-4 ${!mode? 'text-danger' : "text-primary" }`}>Mode</li>
                         </ul>
-                        <label className='mt-3'>
-                            <input type="checkbox" /> 
+                        <label className={`mt-3 ${mode ? "bg-dark" : "bg-gray"}`}  >
+                            <input type="checkbox" onChange={() => setMode(!mode)} checked={mode} /> 
                             <span></span>
                         </label>
                      </div>
@@ -25,13 +29,25 @@ function App(){
                 <main>
                     <div className='container'>
                         <div className='text-center content'>
-                            <h1>Light Mode is On</h1>
-                            <p className=' m-auto mt-3'>
-                                Light mode refers to the default setting on most devices where the background is light
-                            </p>
+                            {
+                               !mode ? 
+                                    <>
+                                    <h1>Light Mode is On</h1>
+                                    <p className=' m-auto mt-3'>
+                                        Light mode refers to the default setting on most devices where the background is light
+                                    </p>
+                                    </>
+                                    : 
+                                    <>
+                                        <h1 className='text-light'>Dark Mode is On</h1>
+                                        <p className='text-light m-auto mt-3'>
+                                            Dark mode refers to the default setting on most devices where the background is Dark
+                                        </p>
+                                    </>
+                            }
                         </div>
                         <div className='cards-content d-flex '>
-                            <div class="card" style={{width:"18rem"}}>
+                            <div className="card" style={{width:"18rem"}}>
                                     <img className="card-img-top" src={photo1} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Headsets</h5>
@@ -40,7 +56,7 @@ function App(){
                                     </div>
                             </div>
 
-                            <div class="card" style={{width:"18rem"}}>
+                            <div className="card" style={{width:"18rem"}}>
                                     <img className="card-img-top" src={photo2} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Shoes</h5>
@@ -49,7 +65,7 @@ function App(){
                                     </div>
                             </div>
 
-                            <div class="card" style={{width:"17rem"}}>
+                            <div className="card" style={{width:"17rem"}}>
                                     <img className="card-img-top" src={photo3} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title">Accessories</h5>

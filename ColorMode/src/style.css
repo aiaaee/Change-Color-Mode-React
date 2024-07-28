@@ -13,6 +13,7 @@ header{
 }
 li{
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .Main_header{
@@ -25,14 +26,26 @@ label{
     width: 60px;
     border-radius: 35px;
     cursor: pointer;
-    background-color: rgb(160, 160, 160);
+    
     height: 30px;
 }
 
 label input{
-    width: 0;
+    width: 0px;
     height: 0;
     opacity: 0;
+}
+
+label input:checked +  span{
+    right: 5%;
+}
+
+.bg-gray{
+    background-color: rgb(160, 160, 160);
+}
+.bg-lightgray{
+    background-color: lightgray;
+    color: black;
 }
 
 label span{
@@ -41,7 +54,8 @@ label span{
     width: 25px;
     height:25px;
     border-radius: 40px;
-    top: 4.5%;
+    top:35px;
+    right: 88px;
     color: white;
     background-color: #ffff;
 }
