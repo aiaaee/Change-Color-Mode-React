@@ -23,3 +23,28 @@ When retrieving data, since it was stored as a JSON string, you need to parse it
 ## Custom Hook for LocalStorage
 
 For a more reusable solution, you can create a custom hook that abstracts the `LocalStorage` logic. This custom hook can then be used across multiple components. Here's a basic structure of a custom hook for `LocalStorage` :
+
+```
+function useLocalStorage(key, initialValue) {
+const [storedValue, setStoredValue] = useState(() => {
+try {
+const item = window.localStorage.getItem(key);
+return item ? JSON.parse(item) : initialValue;
+} catch (error) {
+console.log(error);
+return initialValue;
+}
+});
+
+const setValue = value => {
+try {
+setStoredValue(value);
+window.localStorage.setItem(key, JSON.stringify(value));
+} catch (error) {
+console.log(error);
+}
+};
+
+return [storedValue, setValue];
+}
+```
