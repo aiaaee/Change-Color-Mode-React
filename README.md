@@ -33,6 +33,22 @@ When retrieving data, since it was stored as a JSON string, you need to parse it
 
 ## Solution For my Project
 
-in my Project I dealt with changing website color mode and I thought about protecting the color mode of website base on User computer mode . so in that case I needed to use LocalStorage to cache some information about computer mode of user and I found colour mode of them base on methods of `Localstorage`
+in my Project I dealt with changing website color mode and I thought about protecting the color mode of website base on User computer mode . so in that case I needed to use LocalStorage to cache some information about computer mode of user and I found colour mode of them base on methods of `Localstorage` : 
+```
+let changeMode = () => {
+        let initialMode = localStorage.getItem('mode')
+        if(initialMode == null){
+            if(window.matchMedia('(prefer-color-scheme:dark)').matches){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        else{
+            return JSON.parse(localStorage.getItem('mode'))
+        }
+    }
+```
 
 
