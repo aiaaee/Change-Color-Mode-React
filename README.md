@@ -52,7 +52,9 @@ let changeMode = () => {
 ```
 
 for finishing off the project , we need to switch variable `changeMode` in our useState  :
-``` let [mode , setMode] = useState(changeMode()) ```
+```
+let [mode , setMode] = useState(changeMode())
+ ```
 
 
-
+Project is visible in section [source](https://github.com/aiaaee/Change-Color-Mode-React/tree/main/ColorMode)
