@@ -19,34 +19,5 @@ localStorage.setItem('items', JSON.stringify(items));
 ```
 When retrieving data, since it was stored as a JSON string, you need to parse it back into a JavaScript object using `JSON.parse()`
 
+### Solution
 
-## Custom Hook for LocalStorage
-
-For a more reusable solution, you can create a custom hook that abstracts the `LocalStorage` logic. This custom hook can then be used across multiple components. Here's a basic structure of a custom hook for `LocalStorage` :
-
-```
-function useLocalStorage(key, initialValue) {
-const [storedValue, setStoredValue] = useState(() => {
-try {
-const item = window.localStorage.getItem(key);
-return item ? JSON.parse(item) : initialValue;
-} catch (error) {
-console.log(error);
-return initialValue;
-}
-});
-
-const setValue = value => {
-try {
-setStoredValue(value);
-window.localStorage.setItem(key, JSON.stringify(value));
-} catch (error) {
-console.log(error);
-}
-};
-
-return [storedValue, setValue];
-}
-```
-
-This custom hook `useLocalStorage` takes a key and an initialValue and manages the LocalStorage for that key. It provides a storedValue that reflects the current state of the `LocalStorage` and a setValue function to update it.
