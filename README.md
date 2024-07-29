@@ -6,7 +6,11 @@ in this project I decided to create a button to change a color mode of website .
 
 after doing stylesheets of website , started to write `Usestate` hooks to import mode base on being _true_ and _false_ condition. on the top of that we need to import changes on input to take advantage of Usestate. 
 The checked attribute in HTML is used to indicate whether a checkbox or radio button is selected by default when the page loads , so I changed checked base on my mode.
-In the end, I was able to implement a dark mode correctly by changing the text on the screen as well as changing the background color 
+In the end, I was able to implement a dark mode correctly by changing the text on the screen as well as changing the background color .
+
+![mode1](https://github.com/user-attachments/assets/cd5f38cc-4f71-43a8-bf80-4a08514b49cd)
+
+
 
 ## localStorage property
 The localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.
