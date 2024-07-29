@@ -51,4 +51,8 @@ let changeMode = () => {
     }
 ```
 
+for finishing off the project , we need to switch variable `changeMode` in our useState  :
+``` let [mode , setMode] = useState(changeMode()) ```
+
+
 
