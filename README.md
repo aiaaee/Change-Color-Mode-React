@@ -19,5 +19,8 @@ localStorage.setItem('items', JSON.stringify(items));
 ```
 When retrieving data, since it was stored as a JSON string, you need to parse it back into a JavaScript object using `JSON.parse()`
 
-### Solution
+## Solution For my Project
+
+in my Project I dealt with changing website color mode and I thought about protecting the color mode of website base on User computer mode . so in that case I needed to use LocalStorage to cache some information about computer mode of user and I found colour mode of them base on methods of `Localstorage`
+
 
