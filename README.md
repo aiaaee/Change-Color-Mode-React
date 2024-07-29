@@ -1,8 +1,11 @@
 # Change color mode in React
 
-in this project I decided to create a button to change a colour mode of website . at first I write jsx and styles of my website then I used React hooks for deveoping button and change it in diffrent color . 
+in this project I decided to create a button to change a color mode of website . at first I write jsx and styles of my website then I used React hooks for deveoping button and change it in diffrent color . 
 
+![Untitled](https://github.com/user-attachments/assets/56791d84-9f24-422a-a624-7f7367473f50)
 
+after doing stylesheets of website , started to write `Usestate` hooks to import mode base on being _true_ and _false_ condition. on the top of that we need to import changes on input to take advantage of Usestate. 
+The checked attribute in HTML is used to indicate whether a checkbox or radio button is selected by default when the page loads , so I changed checked base on my mode . 
 
 
 ## localStorage property
