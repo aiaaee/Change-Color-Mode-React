@@ -1,14 +1,31 @@
-import React , {useState} from 'react'
+import React , {useEffect, useState} from 'react'
 import './style.css'
 import photo1 from './image/1.jpg'
 import photo2 from './image/2.jpg'
 import photo3 from './image/3.jpg'
 
 function App(){
-    const [mode , setMode] = useState(false)
+    let changeMode = () => {
+        let initialMode = localStorage.getItem('mode')
+        if(initialMode == null){
+            if(window.matchMedia('(prefer-color-scheme:dark)').matches){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        else{
+            return JSON.parse(localStorage.getItem('mode'))
+        }
+    }
 
-    console.log(mode)
-
+    let [mode , setMode] = useState(changeMode())
+    
+    useEffect(() => {
+        return localStorage.setItem('mode' , JSON.stringify(mode))
+    } , [mode])
+    
     return(
         <>
             <div className={`${mode ? 'bg-black' : ""}`}>
@@ -46,7 +63,7 @@ function App(){
                                     </>
                             }
                         </div>
-                        <div className='cards-content d-flex '>
+                        <div className='cards-content d-flex mb-5 '>
                             <div className="card" style={{width:"18rem"}}>
                                     <img className="card-img-top" src={photo1} alt="Card image cap" />
                                     <div className="card-body">
@@ -76,7 +93,7 @@ function App(){
                         </div>
                     </div>
                 </main>
-                
+                <br/> 
             </div>
         </>
     )

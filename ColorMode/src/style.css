@@ -26,7 +26,6 @@ label{
     width: 60px;
     border-radius: 35px;
     cursor: pointer;
-    
     height: 30px;
 }
 
@@ -37,7 +36,7 @@ label input{
 }
 
 label input:checked +  span{
-    right: 5%;
+    right: 11.8%;
 }
 
 .bg-gray{
@@ -54,8 +53,8 @@ label span{
     width: 25px;
     height:25px;
     border-radius: 40px;
-    top:35px;
-    right: 88px;
+    top:36px;
+    right: 13.5%;
     color: white;
     background-color: #ffff;
 }
