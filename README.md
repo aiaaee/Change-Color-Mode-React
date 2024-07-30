@@ -1,4 +1,4 @@
-# Change color mode in React
+# Change Color Mode in React
 
 in this project I decided to create a button to change a color mode of website . at first I write jsx and styles of my website then I used React hooks for deveoping button and change it in diffrent color . 
 
