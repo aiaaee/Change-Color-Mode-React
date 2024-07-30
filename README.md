@@ -1,6 +1,6 @@
 # Change Color Mode in React
 
-in this project I decided to create a button to change a color mode of website . at first I write jsx and styles of my website then I used React hooks for deveoping button and change it in diffrent color . 
+In this project I decided to create a button to change a color mode of website . at first I write jsx and styles of my website then I used React hooks for deveoping button and change it in diffrent color . 
 
 ![Untitled](https://github.com/user-attachments/assets/56791d84-9f24-422a-a624-7f7367473f50)
 
@@ -15,7 +15,7 @@ In the end, I was able to implement a dark mode correctly by changing the text o
 ## localStorage property
 The localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.
 
-localStorage is similar to sessionStorage, except that while localStorage data has no expiration time, sessionStorage data gets cleared when the page session ends — that is, when the page is closed. (localStorage data for a document loaded in a `private browsing` or `incognito` session is cleared when the last `private` tab is closed.)
+LocalStorage is similar to sessionStorage, except that while localStorage data has no expiration time, sessionStorage data gets cleared when the page session ends — that is, when the page is closed. (localStorage data for a document loaded in a `private browsing` or `incognito` session is cleared when the last `private` tab is closed.)
 
 Setting Items in LocalStorage
 
